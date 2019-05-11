@@ -36,18 +36,16 @@ class App extends Component {
       return robot.name.toLowerCase().includes(searchField.toLowerCase())
     });
 
-    if (isPending) {
-      return <h1>loading...</h1>;
-    }
-
     return (
       <div className='tc'>
         <Header />
         <SearchBox searchChange={onSearchChange}/>
         <Scroll>
-          <ErrorBoundary>
-            <CardList robots={filteredRobots} />
-          </ErrorBoundary>
+          { isPending ? <h1>Loading</h1> :
+            <ErrorBoundary>
+              <CardList robots={filteredRobots} />
+            </ErrorBoundary>
+          }
         </Scroll>
       </div>
     );
