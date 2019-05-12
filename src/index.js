@@ -1,14 +1,17 @@
+import 'tachyons';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware, combineReducers } from 'redux';
-import { createLogger } from 'redux-logger';
 import thunkMiddleware from 'redux-thunk';
-import './index.css';
+import { Provider } from 'react-redux';
+import { createLogger } from 'redux-logger';
+import { createStore, applyMiddleware, combineReducers } from 'redux';
+
 import App from './containers/App';
 import * as serviceWorker from './serviceWorker';
 import { searchRobots, fetchRobots } from './reducers';
-import 'tachyons';
+
+import './index.css';
+
 
 const logger = createLogger();
 
