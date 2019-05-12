@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+
 import CardList from '../components/CardList';
 import ErrorBoundary from '../components/ErrorBoundary';
 import Header from '../components/Header';
-import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
-import './App.css';
+import SearchBox from '../components/SearchBox';
 import { setSearchField, fetchRobots } from '../actions';
+
+import './App.css';
 
 
 const mapStateToProps = (state) => {
